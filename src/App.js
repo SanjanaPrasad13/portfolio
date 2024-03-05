@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Hero from './components/Hero';
 import AboutPage from './components/AboutPage';
 import ProjectsPage from './components/ProjectsPage';
@@ -13,10 +13,10 @@ import HomePage from './components/HomePage';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <div className="App">
         <Navbar />
-        <div className="main-content"> 
+        <div className="main-content">
           <Routes>
             <Route path="/" element={<Hero />} />
             <Route path="/about" element={<AboutPage />} />
